@@ -34,5 +34,106 @@ function maxValueFunction() {
 }
 
 function oddOrEven() {
+    for(i=0; i<15; i++) {
+        if((i+1) % 2 === 0){
+           alert((i+1) + " is even");
+        } else{
+            alert((i+1) + " is odd");
+        }
+    }
+}
+
+function fizzBuzz() {
+    var array = [];
+
+    for(i=1; i<101; i++) {
+        var arrayIndex = i-1;
+        if(i % 15 === 0){
+           array[arrayIndex] = "FizzBuzz";
+        } else if (i % 3 === 0) {
+            array[arrayIndex] = "Fizz";
+        } else if (i % 5 === 0) {
+            array[arrayIndex] = "Buzz";
+        } else {
+            array[arrayIndex] = i;
+        }
+    }
+    alert(array);
+}
+
+function divisiblyBy3() {
+    var counter = 0;
+
+    for(i=1; i<1001; i++) {
+        if(i % 3 === 0) {
+           counter++;
+        }
+    }
+    alert("There are this many numbers betwen 1 and 1000 that are divisible by 3: " + counter)
+}
+
+function numberPyramid() {
+    var row = "1";
+    var j = 1;
+
+    for(i=1; i<6; i++){
+        for(j=1; j<=i; j++){
+            if(j === 1){
+                row = "1";
+            } else{
+                row = row + j.toString();
+            }
+        }
+        j--;
+        while((j)>0){
+            j--;
+            if(j>0){
+                row = row + j.toString();
+            }
+        }
+        console.log(row);
+    }
+}
+
+function numberPyramid2(){
+    var row = "";
+    var j = 1;
+    var i = 1;
     
+    for(i=1; i<6; i++){
+        for(j=1; j<=i; j++){
+            if(j === 1){
+                row = "1";
+            } else{
+                row = row + j.toString();
+            }
+        }
+        j--;
+        while(j>0){
+            j--;
+            if(j>0){
+                row = row + j.toString();
+            }
+        }
+        console.log(row);
+    }
+    i--;
+    while(i>0){
+        i--;
+        for(j=1; j<=i; j++){
+            if(j === 1){
+                row = "1";
+            } else{
+                row = row + j.toString();
+            }
+        }
+        j--;
+        while(j>0){
+            j--;
+            if(j>0){
+                row = row + j.toString();
+            }
+        }
+        console.log(row);
+    }
 }
