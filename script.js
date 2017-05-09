@@ -82,7 +82,6 @@ function numberPyramid() {
             } else{
                 row = row + j.toString();
                 row = row.slice(1);
-
             }
         }
         j--;
