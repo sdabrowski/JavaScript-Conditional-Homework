@@ -80,7 +80,7 @@ function numberPyramid() {
             if(j === 1){
                 row = "    1";
             } else{
-                row = row + j.toString();
+                row = row.concat(j);
                 row = row.slice(1);
             }
         }
@@ -88,7 +88,7 @@ function numberPyramid() {
         while((j)>0){
             j--;
             if(j>0){
-                row = row + j.toString();
+                row = row.concat(j);
             }
         }
         console.log(row);
@@ -105,7 +105,7 @@ function numberPyramid2(){
             if(j === 1){
                 row = "    1";
             } else{
-                row = row + j.toString();
+                row = row.concat(j);
                 row = row.slice(1);
             }
         }
@@ -113,19 +113,19 @@ function numberPyramid2(){
         while(j>0){
             j--;
             if(j>0){
-                row = row + j.toString();
+                row = row.concat(j);
             }
         }
         console.log(row);
     }
     i--;
-    while(i>0){
+    while(i>1){
         i--;
         for(j=1; j<=i; j++){
             if(j === 1){
                 row = "    1";
             } else{
-                row = row + j.toString();
+                row = row.concat(j);
                 row = row.slice(1);
             }
         }
@@ -133,10 +133,9 @@ function numberPyramid2(){
         while(j>0){
             j--;
             if(j>0){
-                row = row + j.toString();
+                row = row.concat(j);
             }
         }
-
         console.log(row);
     }
 }
