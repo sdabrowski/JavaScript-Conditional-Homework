@@ -75,13 +75,14 @@ function divisiblyBy3() {
 function numberPyramid() {
     var row = "1";
     var j = 1;
-
     for(i=1; i<6; i++){
         for(j=1; j<=i; j++){
             if(j === 1){
-                row = "1";
+                row = "    1";
             } else{
                 row = row + j.toString();
+                row = row.slice(1);
+
             }
         }
         j--;
@@ -103,9 +104,10 @@ function numberPyramid2(){
     for(i=1; i<6; i++){
         for(j=1; j<=i; j++){
             if(j === 1){
-                row = "1";
+                row = "    1";
             } else{
                 row = row + j.toString();
+                row = row.slice(1);
             }
         }
         j--;
@@ -122,9 +124,10 @@ function numberPyramid2(){
         i--;
         for(j=1; j<=i; j++){
             if(j === 1){
-                row = "1";
+                row = "    1";
             } else{
                 row = row + j.toString();
+                row = row.slice(1);
             }
         }
         j--;
@@ -134,6 +137,7 @@ function numberPyramid2(){
                 row = row + j.toString();
             }
         }
+
         console.log(row);
     }
 }
